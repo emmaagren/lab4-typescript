@@ -1,59 +1,77 @@
-# Laboration4
+# Laboration 4 – Angular II
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.27.
+Det här projektet är skapat som en del av kursen Programmering i TypeScript vid Mittuniversitetet.
 
-## Development server
+## Publicerad webbplats
 
-To start a local development server, run:
+https://lab4-typescript.netlify.app/
+
+## Beskrivning
+
+Webbapplikationen visar kurser från Webbutvecklingsprogrammets ramschema. Användaren kan söka efter kurser och sortera kurslistan utifrån kurskod, kursnamn eller progression.
+
+## Funktionalitet
+
+- Visar kurser från en JSON-fil i en tabell.
+- Hämtar kursinformation med Angular HttpClient via en service.
+- Filtrerar kurser utifrån kurskod eller kursnamn.
+- Uppdaterar sökresultatet direkt när användaren skriver.
+- Sorterar kurser alfabetiskt efter kurskod, kursnamn eller progression.
+- Kombinerar sökning och sortering utan att sidan laddas om.
+- Har responsiv design som fungerar på både dator och mobil.
+
+## Tekniker
+
+- Angular
+- TypeScript
+- HTML
+- CSS
+- Angular Signals och computed()
+- Angular HttpClient
+- Git och GitHub
+
+## Installation
+
+Klona projektet:
+
+```bash
+git clone https://github.com/emmaagren/lab4-typescript.git
+```
+
+Gå till projektmappen:
+
+```bash
+cd lab4-typescript
+```
+
+Installera beroenden:
+
+```bash
+npm install
+```
+
+Starta utvecklingsservern:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Öppna sedan `http://localhost:4200` i webbläsaren.
 
-## Code scaffolding
+## Kursdata
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Kursinformationen kommer från Mittuniversitetets ramschema:
 
-```bash
-ng generate component component-name
-```
+https://webbutveckling.miun.se/files/ramschema.json
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+JSON-filen finns lokalt i projektets `public`-mapp.
 
-```bash
-ng generate --help
-```
+## Github
 
-## Building
+https://github.com/emmaagren/lab4-typescript.git
 
-To build the project run:
+## Författare
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Emma Ågren 
+Student 
+Mittuniversitetet
