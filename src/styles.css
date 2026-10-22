@@ -1,1 +1,57 @@
-/* You can add global styles to this file, and also import other style files */
+/* Grundinställningar */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f5f5;
+  color: #263238;
+}
+
+/* Sidhuvud */
+header {
+  background-color: #245c60;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Huvudinnehåll */
+main {
+  min-height: 70vh;
+  padding: 1rem;
+}
+
+/* Sidfot */
+footer {
+  background-color: #245c60;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Anpassning för mobiltelefoner */
+@media (max-width: 600px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 0.5rem;
+  }
+}
