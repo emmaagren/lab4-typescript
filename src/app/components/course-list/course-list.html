@@ -7,27 +7,49 @@
     ramschema vid Mittuniversitetet.
   </p>
 
+  <!-- Sökfält för att filtrera kurser -->
+  <div class="search">
+    <label for="search">Sök kurs:</label>
+    <input type="search" id="search" placeholder="Sök på kurskod eller kursnamn" [value]="searchTerm()"
+      (input)="updateSearch($event)">
+  </div>
+
   <!-- Tabell med kursinformation -->
   <table>
     <thead>
       <tr>
-        <th scope="col">Kurskod</th>
-        <th scope="col">Kursnamn</th>
-        <th scope="col">Progression</th>
+        <th scope="col">
+          <button type="button" (click)="sortCourses('code')">
+            Kurskod
+          </button>
+        </th>
+
+        <th scope="col">
+          <button type="button" (click)="sortCourses('coursename')">
+            Kursnamn
+          </button>
+        </th>
+
+        <th scope="col">
+          <button type="button" (click)="sortCourses('progression')">
+            Progression
+          </button>
+        </th>
+
       </tr>
     </thead>
 
     <tbody>
-      @for (course of courses(); track course.code) {
-        <tr>
-          <td>{{ course.code }}</td>
-          <td>{{ course.coursename }}</td>
-          <td>{{ course.progression }}</td>
-        </tr>
+      @for (course of filteredCourses(); track course.code) {
+      <tr>
+        <td>{{ course.code }}</td>
+        <td>{{ course.coursename }}</td>
+        <td>{{ course.progression }}</td>
+      </tr>
       } @empty {
-        <tr>
-          <td colspan="3">Inga kurser att visa.</td>
-        </tr>
+      <tr>
+        <td colspan="3">Inga kurser att visa.</td>
+      </tr>
       }
     </tbody>
   </table>
